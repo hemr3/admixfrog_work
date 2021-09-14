@@ -1,4 +1,7 @@
 # attempt to make a chromoplot of local ancestry ####
+
+#this was not used in final write-up
+
 library(karyoploteR)
 library(regioneR)
 
