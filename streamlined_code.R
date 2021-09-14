@@ -7,6 +7,7 @@ library(readr)
 library(patchwork)
 library(reprex)
 #this code below will only work IF all the lib.R commands have been read in.
+#code here is drawn from Peter (2020) - and is buggy. No figures created here went into final write-up
 
 #bin.xz plotting (remember to include binding all)####
 #peter's unless otherwise stated. 
