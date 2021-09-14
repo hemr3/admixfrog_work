@@ -166,36 +166,4 @@ write_csv(bound_altai_snp, "bound_altai_snp.csv")
 #likely due to small memory - might need to do it on the server. but have managed to do for 1 CHR apiece
 #individuals are named by 'name' column at the end of the frames
 
-#binding these individuals together ####
-
-chr13_snp=rbind(altaisnp13, chagsnp13, vindsnp13, denisnp13, deni8snp13,
-                make.row.names = T)
-write_csv(chr13_snp, "chr13_snp.snp")
-
-#reading in the snp file ####
-chr13snp=read_csv("chr13_snp.snp")
-
-extract_afs(pref = "chr13snp", 
-            outdir = "~/analyses/admixfrog/res/chr13.rds")
-
-#if/else statements ####
-chr13 = read_csv("chr13eg2.xz")
-
-mod_chr13ref = chr13 %>% 
-  if(ANC_ref == 2){
-    AFR_alt / (AFR_alt + AFR_ref)
-  }  else if(ANC_alt == 2) {
-    AFR_ref / (AFR_alt + AFR_ref)
-  }
-#error: argument is not interpretable as logical
-#error: the condition has length > 1 and only the first element will be used
-
-chr13$output = chr13 %>%
-  ifelse(chr13$ANC_ref==2, chr13$AFR_alt/(chr13$AFR_alt + chr13$AFR_ref)) %>% 
-  ifelse(chr13$ANC_alt==2, chr13$AFR_ref/(chr13$AFR_alt + chr13$AFR_ref))
-# error:'list' object cannot be coerced to type 'logical'
-
-#works but creates a TRUE/FALSE matrix whcih then needs to be acted on.
-chr13$ref_output = ifelse(chr13$ANC_ref==2, yes = T, no=F)
-chr13$alt_ouput = ifelse(chr13$ANC_alt==2, yes = T, no = F) 
 
