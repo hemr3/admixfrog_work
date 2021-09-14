@@ -1,4 +1,4 @@
-#creates Fig 6
+#creates Figs 6, S1
 
 library(tidyverse)
 library(ggrepel)
@@ -6,6 +6,7 @@ library(ggrepel)
 
 het = read_csv("~/analyses/admixfrog/het/linear_regression.csv")
 lowhet = read_csv("~/analyses/admixfrog/het/low_linear regression.csv")
+sel = read_csv("~/Documents/supple_S1.csv")
 
 fit = lm(het$Total_High_het ~ het$LowCov_HetEst)
 
@@ -34,3 +35,13 @@ ggsave(plot = fitplot,
        height = 8,
        width = 8)
   
+#below creates S1, introgression v heterozygosity 
+
+p1 = ggplot(sel, aes(x = sel$`%intro`, y=sel$Het))+
+  geom_point()+
+  xlab("Percentage introgressed ancestry")+
+  ylab("Heterozygosity")+
+  theme_minimal()+
+#  ggtitle("Introgressed ancestry in sampled specimens against heterozygosity")+
+  xlim(0, 0.035)+
+  ylim(0, 0.00017)
