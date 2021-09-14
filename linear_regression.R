@@ -1,3 +1,5 @@
+#creates Fig 6
+
 library(tidyverse)
 library(ggrepel)
 #doing linear regression to estimate heterozygosities
