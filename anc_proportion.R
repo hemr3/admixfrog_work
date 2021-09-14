@@ -3,6 +3,7 @@
 #equation used: 
 
 #(homNea * 2 + hetNea) / ((homNea * 2 + hetNea) + (homDeni * 2 + hetDeni))
+  #this calculates Neanderthal ancestry. Add 1 - to start for Denisovan. 
 
 perc = mes_rle %>% 
   filter(target == "DEN" & type == "homo") %>%  #changes based on ancestry inferred: "NEA", "NEADEN" ("homo", "het")
