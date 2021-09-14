@@ -1,7 +1,7 @@
 # admixfrog_work
 Commands and code relating to the work I have undertaken in admixfrog
 
-Overall, contains many scripts - some of them are more useful than others. 
+Overall, contains many scripts. 
 
 To use the commands listed in 'streamlined_code.R' the packages and commands created in 'lib.R' must first be loaded in. Otherwise it cannot create the plots. 
 
