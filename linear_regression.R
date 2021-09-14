@@ -45,3 +45,10 @@ p1 = ggplot(sel, aes(x = sel$`%intro`, y=sel$Het))+
 #  ggtitle("Introgressed ancestry in sampled specimens against heterozygosity")+
   xlim(0, 0.035)+
   ylim(0, 0.00017)
+
+p1 = p1 +
+  geom_label_repel(aes(label=sel$Specimen),
+                   box.padding = 0.35,
+                   point.padding = 0.5,
+                   segment.color = "grey50")+
+  theme_minimal()
