@@ -14,3 +14,5 @@ This is much the same for: binding_frames / binding_snps , which create whole-ge
 binplots.R creates images similar to Figs 8, 9, 29, S3. 
 
 den_anc.R creates Fig 11.
+
+anc_proportions.R calculates ancestry proportions for each individual. 
