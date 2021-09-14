@@ -11,6 +11,6 @@ linear_regression.R is to do with calculating the heterozygosities based on the 
 
 This is much the same for: binding_frames / binding_snps , which create whole-genome files necessary for later analyses. 
 
-binplots.R creates images similar to Figs 8, 9, S3. 
+binplots.R creates images similar to Figs 8, 9, 29, S3. 
 
 den_anc.R creates Fig 11.
