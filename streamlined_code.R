@@ -16,6 +16,8 @@ library(reprex)
 deni8_bin = load_bin_data("~/analyses/admixfrog/res/deni8_res/bound_deni8bin_eg2.csv", name = T)
 
 TRACK = get_track(deni8_bin, TRACK = "NEA", p_max = 0.45, p_min = 0.2)
+  #lines taken from Peter's (2020) GitHub code to make his code work
+  #changing p_max + p_min does not change the plot 
 
 d2 = bin_to_long(deni8_bin) %>% 
   filter(variable %in% TRACK) %>% 
