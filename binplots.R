@@ -1,4 +1,4 @@
-#code to create binplots in Figs 8, 9, S3 
+#code to create binplots in Figs 8, 9, 29, S3 
 
 #commands needed to make this work from lib.R: load_bin_data, bin_to_long, col_scale, col_vec
 
